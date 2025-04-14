@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function(){
+
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function(){
+                    correct.style.backgroundColor = 'Green';
+                    document.querySelector('#Q1').innerHTML = "Correct! My Glorius Queen Kim Chaewon PuPu!";
+                });
+
+                let wrong = document.querySelectorAll('.wrong');
+                for (let i = 0; i < wrong.length; i++){
+                    wrong[i].addEventListener('click', function(){
+                        wrong[i].style.backgroundColor = 'Red';
+                        document.querySelector('#Q1').innerHTML = "Incorrect! The answer is my glorius queen Kim Chaewon!";
+                    })
+                }
+
+                document.querySelector('form').addEventListener('submit', function(event){
+                    let song = document.querySelector('#Song');
+                    if (song.value == "Blue Flame")
+                    {
+                        song.style.backgroundColor = 'Green';
+                        document.querySelector('#Q2').innerHTML = "Good Choice!";
+                        event.preventDefault();
+                        console.log("form submitted");
+                    }
+                    else
+                    {
+                        song.style.backgroundColor = 'Red';
+                        document.querySelector('#Q2').innerHTML = "erm actually, it's Blue Flame...";
+                        event.preventDefault();
+                        console.log("form submitted");
+                    }
+                });
+            });
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                 <h3>Who is the leader of LeSerrafim?</h3>
+                 <button class = "correct">Kim Chaewon</button>
+                 <button class = "wrong">Nakamura kazuha</button>
+                 <button class = "wrong">Miyawaki Sakura</button>
+                 <button class = "wrong">Huh Yunjin</button>
+                 <button class = "wrong">Hong Eunchaa</button>
+                 <p id = 'Q1' ></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Best LeSerrafim Song?</h3>
+                <form>
+                    <input autocomplete="off" id = "Song" placeholder = "Song name" type="text"></input>
+                    <input type = "submit">
+                    <p id = "Q2"></p>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
