@@ -1,0 +1,26 @@
+I have used:
+<html>
+<button>
+<form>
+<script>
+<body>
+<footer>
+<header>
+<a>
+<p>
+<input>
+<div>
+<ul>
+<li>
+<h1>
+<h2>
+<h3>
+
+header
+h3
+h2
+h1
+p
+
+I used bootstrap to implement a NavBar on the top and to ensure that my html elements are able to responsive to changes in display size
+I used JavaScript to implement a button function to alternate between images when clicked and also an form to receive email input from users

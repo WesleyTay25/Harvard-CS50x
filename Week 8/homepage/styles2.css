@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+
+body{
+    background: #222;
+}
+.header{
+    margin-left: 10px;
+    margin-right:10px;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 2em;
+    width: 100%;
+    opacity: 0;
+    animation: fadein 1s ease-in forwards;
+}
+.main{
+    background: linear-gradient(180deg, #424552, #222);
+}
+.header h1{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.profile{
+    display: flex;
+    margin-left: 10px;
+}
+.profile p{
+    width: 70%;
+    color: #FFFFFF;
+    font-size: 24px;
+    margin-right: 5px;
+    line-height: 1.6;
+    animation: goup 1s ease-in forwards;
+}
+#pfp{
+    width: 30%;
+    max-height: 600px;
+}
+.hobbies{
+    display: flex;
+    margin-left: 10px;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:50%;
+    animation: goright 1s ease-in forwards;
+}
+#image{
+    display:none;
+    width:30%;
+    opacity: 0;
+    animation: fadein 2s ease-in forwards;
+}
+.text{
+    animation: goup 1s ease-in forwards;
+}
+.headings{
+    font-weight: bold;
+    color: #FFFFFF;
+}
+button{
+    border-radius: 5px;
+}
+button:hover{
+    background-color: grey;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    margin: 10px;
+}
+span{
+    color: #FFFFFF;
+}
+p{
+    color: #FFFFFF;
+    font-size: 24px;
+    margin-right: 5px;
+}
+li{
+    font-size: 18px;
+    color: #FFFFFF;
+}
+a {
+    color: #DDDDDD;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+hr{
+    margin: 0px;
+    color: #ffffff;
+}
+
+@keyframes fadein{
+    to{opacity: 1;}
+}
+@keyframes goup{
+    from{transform:translateY(50%)}
+}
+@keyframes goright{
+    from{transform:translateX(-50%)}
+}

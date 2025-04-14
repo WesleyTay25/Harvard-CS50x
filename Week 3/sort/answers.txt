@@ -1,0 +1,26 @@
+sort1 uses: BubbleSort
+
+How do you know?:
+When running random5000 and random50000, there was a time difference of 5s in sort 1 while sort 2 only had a difference of 0.2s. Hence i can
+conclude that sort 2 was MergeSort and that sort 1 was either BubbleSort or SeletionSort due to both of them having O(n^2) time complexity
+When running sorted5000 and sorted50000, there was little time difference of 0.2s for sort 1 while a 2s time difference for sort 3. Hence
+i can conclude that sort 1 is BubbleSort (with the "check sorted" conditional added) as it has lower bound time complexity of Omega(n)
+while SelectionSort does not
+
+sort2 uses: MergeSort
+
+How do you know?:
+When running sorted5000 and sorted50000, there was only a time difference of 0.2s while sort3 had a time difference of 1.9s. Hence i concluded
+that sort 2 was either mergesort or bubblesort(with "check sorted" function implemented).
+Hence i compared random5000 and random50000 and found sort 2 had a similiar time difference of 0.2s while sort1 had a time difference of 5s.
+Hence i can conclude that sort 2 is mergesort as its time complexity is O(nlogn) hence resulting in a smaller difference despite a much larger
+data set to sort through compared to sort 1 and sort 3.
+
+sort3 uses: SelectionSort
+
+How do you know?:
+When running random5000 and random50000, there was a time difference of 2s in sort 3 while sort 2 only had a difference of 0.2s. Hence i can
+conclude that sort 2 was MergeSort and that sort 3 was either BubbleSort or SeletionSort due to both of them having O(n^2) time complexity
+When running sorted5000 and sorted50000, there was little time difference of 0.2s for sort 1 while a 2s time difference for sort 3. Hence
+i can conclude that sort 3 is SelectionSort as it did not have a lower bound time complexity of Omega(n) unlike BubbleSort when data is sorted
+
