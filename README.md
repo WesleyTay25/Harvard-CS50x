@@ -13,7 +13,7 @@ Throughout my journey with CS50x, I have been exposed to many topics and have co
 - Week 7: SQL
 - Week 8: HTML/CSS/JS
 - Week 9: Flask
-- Week 10: Final Project
+- Week 10: Final Project (Ongoing)
 
 A few noticeable problems include 
 - Week 5 Speller, where I created a hashtable of linkedlists to optimize time complexity in a program that checks that a paragraph is spelled correctly using a dictionary of 140000 words.
