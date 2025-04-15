@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Edit
+{% endblock %}
+
+{% block main %}
+<main class = "container py-5 text-center">
+    <div class="mb-3">
+        <p>Your current Cash: ${{ "%.2f" | format(cash)}}</p>
+    </div>
+    <form action="/edit" method="post">
+        <div class = "mb-3">
+            <input class="form-control mx-auto w-auto" type="number" name="edit" placeholder="Edit amount" min=0>
+        </div>
+        <div class = "mb-3">
+            <button class = "btn btn-primary" type = "submit">Edit</button>
+        </div>
+    </form>
+</main>
+{% endblock %}
