@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+{% block main %}
+    <main class = "container py-5 text-center">
+        <form action="/sell", method="post">
+            <div class = "mb-3">
+                <select class = "form-select mx-auto w-auto" name="symbol">
+                    <option disabled selected>Symbol</option>
+                    {% for ownedstock in stocks %}
+                    <option value = {{ownedstock.stock}}>{{ownedstock.stock}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class = "mb-3">
+                <input class = "form-control mx-auto w-auto" type = "number" placeholder = "Shares" name = "shares" min = 1 autocomplete="off">
+            </div>
+            <button class = "btn btn-primary" type="submit">Sell</button>
+        </form>
+    </main>
+
+{% endblock %}
